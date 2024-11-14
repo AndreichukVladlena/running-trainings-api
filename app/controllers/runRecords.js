@@ -23,7 +23,7 @@ async function readUsersRuns(req, res) {
   }
 }
 
-async function read(req, res) {
+async function readRunsById(req, res) {
   const { id } = req.params;
 
   try {
@@ -69,4 +69,4 @@ async function remove(req, res) {
   }
 }
 
-module.exports = { create, readUsersRuns, read, update, remove };
+module.exports = { create, readUsersRuns, readRunsById, update, remove };
