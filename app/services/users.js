@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User.js");
 
 const bcryptSalt = bcrypt.genSaltSync(10);
-const jwtSecret = "jhnfkddjdiguoie84i";
+const jwtSecret = process.env.JWT_SECRET;
 
 async function create(username, password) {
   const hashedPassword = bcrypt.hashSync(password, bcryptSalt);
