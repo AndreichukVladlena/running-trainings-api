@@ -6,7 +6,8 @@ const router = express.Router();
 
 router.post("/", authMiddleware, runController.create);
 router.get("/", authMiddleware, runController.readUsersRuns);
-router.get("/:id", authMiddleware, runController.readUsersRuns);
+router.get("/weekly-report", authMiddleware, runController.getWeeklyReport);
+router.get("/:id", authMiddleware, runController.readRunsById);
 router.put("/:id", authMiddleware, runController.update);
 router.delete("/:id", authMiddleware, runController.remove);
 

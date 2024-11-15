@@ -69,4 +69,22 @@ async function remove(req, res) {
   }
 }
 
-module.exports = { create, readUsersRuns, readRunsById, update, remove };
+async function getWeeklyReport(req, res) {
+  const userId = req.user._id;
+
+  try {
+    const report = await runService.getWeeklyReport(userId);
+    res.json(report);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+}
+
+module.exports = {
+  create,
+  readUsersRuns,
+  readRunsById,
+  update,
+  remove,
+  getWeeklyReport,
+};
