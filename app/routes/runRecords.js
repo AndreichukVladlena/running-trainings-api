@@ -29,12 +29,12 @@ const router = express.Router();
  *             properties:
  *               distance:
  *                 type: number
- *                 description: Distance covered in kilometers.
- *                 example: 5.2
+ *                 description: Distance covered in meters.
+ *                 example: 5200
  *               time:
  *                 type: string
- *                 description: Duration of the run in HH:mm:ss format.
- *                 example: 00:30:15
+ *                 description: Duration of the run in seconds.
+ *                 example: 1800
  *               date:
  *                 type: string
  *                 format: date
